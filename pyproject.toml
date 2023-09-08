@@ -1,13 +1,14 @@
 [tool.poetry]
-# TODO: Set a project name, description, and authors.
-name = "project_name"
+name = "zero_saver"
 version = "0.1.0"
-description = ""
+description = "The user interface of zero_saver."
 authors = []
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
+zero-saver-core = {git = "https://github.com/ImplyingICheck/Zero-Saver-Core"}
+customtkinter = "^5.2.0"
 
 [build-system]
 requires = ["poetry-core"]
@@ -32,15 +33,6 @@ markers = [
     "slow: marks slow-running tests",
     "io: marks tests using external IO dependencies",
 ]
-
-[tool.yapfignore]
-ignore_patterns = [
-    "dev_files/*.py",
-    "venv/*.py"
-]
-
-[tool.yapf]
-based_on_style = "yapf"
 
 [tool.pyright]
 include = ["src", "tests"]
